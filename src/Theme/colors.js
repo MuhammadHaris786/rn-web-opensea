@@ -1,0 +1,15 @@
+export default {
+  primary: "#333333",
+  white: "#fff",
+  black: "#000",
+  medium: "#ccc",
+  purple: "purple",
+  orange: "#FF4301",
+  secondary: "#171717",
+  twitter: "#00aced",
+  facebook: "#3b5998",
+  github: "#171515",
+  google: "#dd4b39",
+  linkedin: "#0e76a8",
+  opensea: "#2081E2",
+};
