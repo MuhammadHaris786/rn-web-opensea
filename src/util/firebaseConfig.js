@@ -1,4 +1,7 @@
-import firebase from "firebase";
+import { getStorage } from "firebase/storage";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { initializeFirestore } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyA79P7Uce3w4GLRUS1GxJEm7-y8eDoVWIQ",
   authDomain: "opensea-237e3.firebaseapp.com",
@@ -9,7 +12,9 @@ const firebaseConfig = {
   appId: "1:469873512193:web:33d4982a2e2028e8ead500",
   measurementId: "G-BYN4XTDQMV",
 };
+export const app = initializeApp(firebaseConfig);
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-export default firebase;
+export const storage = getStorage(app);
+export const db = initializeFirestore(app, {
+  experimentalForceLongPolling: true,
+});
